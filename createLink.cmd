@@ -1,0 +1,11 @@
+mklink C:\Users\user\AppData\Local\nvim\init.vim C:\Users\user\windows_nvim\init.vim
+mklink C:\Users\user\AppData\Local\nvim\airline.vim C:\Users\user\windows_nvim\airline.vim
+mklink C:\Users\user\AppData\Local\nvim\coc-settings.json C:\Users\user\windows_nvim\coc-settings.json
+mklink C:\Users\user\AppData\Local\nvim\coc.vim C:\Users\user\windows_nvim\coc.vim
+mklink C:\Users\user\AppData\Local\nvim\dadbod.vim C:\Users\user\windows_nvim\dadbod.vim
+mklink C:\Users\user\AppData\Local\nvim\mappings.vim C:\Users\user\windows_nvim\mappings.vim
+mklink C:\Users\user\AppData\Local\nvim\nerdtree.vim C:\Users\user\windows_nvim\nerdtree.vim
+mklink C:\Users\user\AppData\Local\nvim\telescope.vim C:\Users\user\windows_nvim\telescope.vim
+mklink C:\Users\user\AppData\Local\nvim\vimspector.vim C:\Users\user\windows_nvim\vimspector.vim
+mklink C:\Users\user\AppData\Local\nvim\ycm.vim C:\Users\user\windows_nvim\ycm.vim
+mklink C:\Users\user\AppData\Local\nvim\lua\kevin\init.lua C:\Users\user\windows_nvim\lua\kevin\init.lua

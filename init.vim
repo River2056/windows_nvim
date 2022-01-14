@@ -24,6 +24,7 @@ set hlsearch
 set t_Co=256                            " Support 256 colors
 set path+=**
 set iskeyword+=-
+set noerrorbells
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 call plug#begin('C:/Users/user/AppData/Local/nvim/autoload')
