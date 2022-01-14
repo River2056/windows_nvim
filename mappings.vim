@@ -5,6 +5,7 @@ noremap <leader>aa :%y+<cr>
 nnoremap <leader>tex :Tex<cr>
 noremap <leader>jp :JsonPath<cr>
 nnoremap <leader><space> :noh<cr>
+vnoremap <leader>p "_dP
 
 " tabs
 nnoremap <leader>dt :diffthis<cr>
