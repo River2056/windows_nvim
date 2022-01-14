@@ -1,0 +1,17 @@
+{
+  "languageserver": {
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    }
+  },
+  "java.home": "C:\\Program Files\\Java\\jdk-15.0.1",
+  "java.format.settings.url": "https:\\raw.githubusercontent.com\\google\\styleguide\\gh-pages\\eclipse-java-google-style.xml",
+  "java.format.settings.profile": "GoogleStyle",
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx8G -Xms100m -javaagent:\"c:\\Users\\user\\.vscode\\extensions\\gabrielbb.vscode-lombok-1.0.1\\server\\lombok.jar\"",
+  "java.import.gradle.java.home": "C:\\Program Files\\Java\\jdk-15.0.1",
+  "java.import.gradle.user.home": "C:\\gradle-6.4-bin\\gradle-6.4",
+  "coc.preferences.formatOnSaveFiletypes": ["*"]
+}
