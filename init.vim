@@ -25,6 +25,8 @@ set t_Co=256                            " Support 256 colors
 set path+=**
 set iskeyword+=-
 set noerrorbells
+set scrolloff=10
+set hidden
 au! BufWritePost $MYVIMRC source $MYVIMRC      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 call plug#begin('C:/Users/user/AppData/Local/nvim/autoload')
