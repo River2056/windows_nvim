@@ -59,3 +59,7 @@ vnoremap < <gv
 
 nnoremap <leader>ss :w<cr>
 nnoremap <leader>q :q<cr>
+
+" language specific abbreviations
+autocmd FileType java iabbrev pcls public class <esc>"%pvbbdA {<cr>}<esc>O
+autocmd FileType java iabbrev psvm public static void main(String[] args) {<cr>}<esc>O

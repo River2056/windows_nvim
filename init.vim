@@ -67,7 +67,6 @@ source C:/Users/user/AppData/Local/nvim/telescope.vim
 source C:/Users/user/AppData/Local/nvim/airline.vim
 source C:/Users/user/AppData/Local/nvim/vimspector.vim
 source C:/Users/user/AppData/Local/nvim/dadbod.vim
-let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 
 " language specific
 func! CompileRun()
@@ -75,8 +74,15 @@ func! CompileRun()
     if &filetype == 'python'
         :!time python %
     elseif &filetype == 'java'
-        :!javac %<cr>
-        :!time java %:r
+        let l:path = expand('%')
+        echo l:path
+        exec '!javac -d bin ' . l:path
+        echo 'compile success: ' . l:path
+        let l:path = substitute(l:path, "\\", ".", "g")
+        let l:path = substitute(l:path, ".java", "", "")
+        let l:path = substitute(l:path, "src.", "", "")
+        echo l:path
+        exec '!java -cp ./bin ' . l:path
     elseif &filetype == 'lua'
         :!time lua %
     elseif &filetype == 'sh'
