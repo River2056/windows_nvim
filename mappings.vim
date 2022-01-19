@@ -6,6 +6,7 @@ nnoremap <leader>tex :Tex<cr>
 noremap <leader>jp :JsonPath<cr>
 nnoremap <leader><space> :noh<cr>
 vnoremap <leader>p "_dP
+nnoremap <leader>c viwU
 
 " tabs
 nnoremap <leader>dt :diffthis<cr>

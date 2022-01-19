@@ -47,6 +47,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'OmniSharp/omnisharp-vim'
 " Plug 'mfussenegger/nvim-jdtls'
 " Plug 'nvim-lua/completion-nvim'
 " Plug 'neovim/nvim-lspconfig'
