@@ -21,7 +21,8 @@ set splitbelow
 set splitright
 set relativenumber
 set hlsearch
-set t_Co=256                            " Support 256 colors
+" set t_Co=256                            " Support 256 colors
+set termguicolors
 set path+=**
 set iskeyword+=-
 set noerrorbells
@@ -33,6 +34,7 @@ call plug#begin('C:/Users/user/AppData/Local/nvim/autoload')
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'AndrewRadev/tagalong.vim'
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 Plug 'nvim-lualine/lualine.nvim'
@@ -40,6 +42,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'mogelbrod/vim-jsonpath'
 Plug 'morhetz/gruvbox'
 Plug 'puremourning/vimspector'
+Plug 'szw/vim-maximizer'
 Plug 'preservim/nerdtree'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -85,14 +88,16 @@ func! CompileRun()
         echo l:path
         exec '!java -cp ./bin ' . l:path
     elseif &filetype == 'lua'
-        :!time lua %
+        :!time lua %<cr>
     elseif &filetype == 'sh'
-        :!time bash %
+        :!time bash %<cr>
+    elseif &filetype == 'go'
+        :!time go run %<cr>
     endif
 endfunc
 nmap <leader>r :call CompileRun()<cr>
 
-autocmd FileType go nnoremap <buffer> <leader>r :!go run %
+" autocmd FileType go nnoremap <buffer> <leader>r :!go run %
 
 " fzf settings
 " This is the default extra key bindings
