@@ -1,0 +1,54 @@
+{
+  "adapters": {
+    "java-debug-server": {
+      "name": "vscode-java",
+      "port": "${AdapterPort}"
+    }
+  },
+  "configurations": {
+    "Java Attach": {
+      "default": true,
+      "adapter": "java-debug-server",
+      "configuration": {
+        "request": "attach",
+        "host": "127.0.0.1",
+        "port": "5005"
+      },
+      "breakpoints": {
+        "exception": {
+          "caught": "N",
+          "uncaught": "N"
+        }
+      }
+    },
+    "chrome": {
+      "adapter": "chrome",
+      "default": true,
+      "configuration": {
+        "request": "launch",
+        "url": "http://localhost:3100/",
+        "webRoot": "C:\\Users\\user\\Desktop\\ctbc_remote\\Scorpio\\scorpio-ui",
+        "reAttach": true
+      }
+    },
+    "firefox": {
+      "adapter": "firefox",
+      "configuration": {
+        "request": "launch",
+        "url": "http://localhost:3100/",
+        "webRoot": "C:\\Users\\user\\Desktop\\ctbc_remote\\Scorpio\\scorpio-ui",
+        "reAttach": true
+      }
+    },
+    "run": {
+      "adapter": "vscode-go",
+      "configuration": {
+        "request": "launch",
+        "program": "${fileDirname}",
+        "args": [],
+        "mode": "debug",
+        "dlvToolPath": "C:\\Users\\user\\go\\bin\\dlv.exe"
+      }
+    }
+  }
+}
