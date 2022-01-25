@@ -9,8 +9,8 @@ vnoremap <leader>p "_dP
 nnoremap <leader>c viwU
 
 " tabs
-nnoremap <leader>dt :diffthis<cr>
-nnoremap <leader>df :diffoff<cr>
+nnoremap <leader>dtt :diffthis<cr>
+nnoremap <leader>dff :diffoff<cr>
 nnoremap <leader>nt :tabnew<cr>
 nnoremap <leader>vba :vert ba<cr>
 

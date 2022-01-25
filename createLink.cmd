@@ -2,6 +2,7 @@ mkdir C:\Users\user\AppData\Local\nvim\lua\kevin
 mkdir C:\Users\user\AppData\Local\nvim\init
 mklink C:\Users\user\AppData\Local\nvim\init.vim C:\Users\user\windows_nvim\init.vim
 mklink C:\Users\user\AppData\Local\nvim\coc-settings.json C:\Users\user\windows_nvim\coc-settings.json
+mklink C:\Users\user\AppData\Local\nvim\.vimspector.json C:\Users\user\windows_nvim\.vimspector.json
 mklink C:\Users\user\AppData\Local\nvim\init\sets.vim C:\Users\user\windows_nvim\init\sets.vim
 mklink C:\Users\user\AppData\Local\nvim\init\plugins.vim C:\Users\user\windows_nvim\init\plugins.vim
 mklink C:\Users\user\AppData\Local\nvim\init\airline.vim C:\Users\user\windows_nvim\init\airline.vim

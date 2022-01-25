@@ -45,7 +45,9 @@
       "configuration": {
         "request": "launch",
         "program": "${fileDirname}",
-        "args": [],
+        "args": [
+          "C:\\Users\\user\\Desktop\\Database_output\\PBSS_SIT_1_dbo_PBRCLendingPortfolioLimit.csv"
+        ],
         "mode": "debug",
         "dlvToolPath": "C:\\Users\\user\\go\\bin\\dlv.exe"
       }
