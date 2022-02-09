@@ -62,6 +62,13 @@ vnoremap < <gv
 
 nnoremap <leader>ss :w<cr>
 nnoremap <leader>q :q<cr>
+vnoremap <leader>rc :w !cmd<cr>
+nnoremap <leader>0 :CocCommand rest-client.request<cr>
+
+" Git fugitive
+nmap <leader>gs :Git<cr>
+nmap <leader>gf :diffget //2<cr>
+nmap <leader>gj :diffget //3<cr>
 
 " language specific abbreviations
 autocmd FileType java iabbrev pcls public class <esc>"%pvbbdA {<cr>}<esc>O
