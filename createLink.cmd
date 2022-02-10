@@ -14,4 +14,5 @@ mklink C:\Users\user\AppData\Local\nvim\init\nerdtree.vim C:\Users\user\windows_
 mklink C:\Users\user\AppData\Local\nvim\init\telescope.vim C:\Users\user\windows_nvim\init\telescope.vim
 mklink C:\Users\user\AppData\Local\nvim\init\vimspector.vim C:\Users\user\windows_nvim\init\vimspector.vim
 mklink C:\Users\user\AppData\Local\nvim\init\ycm.vim C:\Users\user\windows_nvim\init\ycm.vim
+mklink C:\Users\user\AppData\Local\nvim\init\harpoon.vim C:\Users\user\windows_nvim\init\harpoon.vim
 mklink C:\Users\user\AppData\Local\nvim\lua\kevin\init.lua C:\Users\user\windows_nvim\lua\kevin\init.lua

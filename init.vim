@@ -8,12 +8,13 @@ source C:/Users/user/AppData/Local/nvim/init/telescope.vim
 " source C:/Users/user/AppData/Local/nvim/init/airline.vim
 source C:/Users/user/AppData/Local/nvim/init/vimspector.vim
 source C:/Users/user/AppData/Local/nvim/init/dadbod.vim
+source C:/Users/user/AppData/Local/nvim/init/harpoon.vim
 
 " language specific
 func! CompileRun()
     exec "w"
     if &filetype == 'python'
-        :!time python %
+        :!python %
     elseif &filetype == 'java'
         let l:path = expand('%')
         echo l:path
@@ -25,11 +26,11 @@ func! CompileRun()
         echo l:path
         exec '!java -cp ./bin ' . l:path
     elseif &filetype == 'lua'
-        :!time lua %<cr>
+        :!lua %<cr>
     elseif &filetype == 'sh'
-        :!time bash %<cr>
+        :!bash %<cr>
     elseif &filetype == 'go'
-        :!time go run %<cr>
+        :!go run %<cr>
     endif
 endfunc
 nmap <leader>r :call CompileRun()<cr>
