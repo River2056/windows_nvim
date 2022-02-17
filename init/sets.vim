@@ -1,7 +1,7 @@
 set nocompatible
 set encoding=utf-8
 set backspace=2
-filetype off
+filetype plugin indent on
 let $PATH = "C:\\Program Files\\Git\\usr\\bin;" . $PATH
 
 let $LANG='en'

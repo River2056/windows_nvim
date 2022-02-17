@@ -11,6 +11,7 @@ source C:/Users/user/AppData/Local/nvim/init/dadbod.vim
 source C:/Users/user/AppData/Local/nvim/init/harpoon.vim
 
 " language specific
+" CompileRun
 func! CompileRun()
     exec "w"
     if &filetype == 'python'
@@ -68,3 +69,9 @@ let g:fzf_colors =
 " previous-history instead of down and up. If you don't like the change,
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+augroup remember_folds
+    autocmd!
+    autocmd BufWinLeave *.* mkview
+    autocmd BufWinEnter *.* silent! loadview
+augroup end

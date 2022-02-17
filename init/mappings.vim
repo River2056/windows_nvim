@@ -1,3 +1,4 @@
+" custom mappings
 inoremap jk <esc>
 inoremap kj <esc>
 let mapleader = ","
@@ -7,6 +8,16 @@ noremap <leader>jp :JsonPath<cr>
 nnoremap <leader><space> :noh<cr>
 vnoremap <leader>p "_dP
 nnoremap <leader>c viwU
+nnoremap <leader>o :Ex<cr>
+nnoremap <leader>% "%p
+nnoremap <leader>ss :w<cr>
+nnoremap <leader>q :q<cr>
+vnoremap <leader>rc :w !cmd<cr>
+nnoremap <leader>0 :CocCommand rest-client.request<cr>
+nnoremap <leader>ev :Hex! C:/Users/user/AppData/Local/nvim/<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>pi :PlugInstall<cr>
+nnoremap <leader>pc :PlugClean<cr>
 
 " tabs
 nnoremap <leader>dtt :diffthis<cr>
@@ -21,14 +32,6 @@ nnoremap <leader>bp :bprevious<cr>
 nnoremap <leader>bd :bdelete<cr>
 nnoremap <leader>bda :%bd<bar>e#<cr>
 nnoremap <leader>ls :ls<cr>
-
-nnoremap <leader>ev :Hex! C:/Users/user/AppData/Local/nvim/<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <leader>pi :PlugInstall<cr>
-nnoremap <leader>pc :PlugClean<cr>
-nnoremap <leader>bn :bn<cr>
-nnoremap <leader>bp :bp<cr>
-nnoremap <leader>bd :bd<cr>
 
 " fzf
 nnoremap <leader>fl :Lines 
@@ -60,11 +63,6 @@ nnoremap <C-l> <C-w>l
 vnoremap > >gv
 vnoremap < <gv
 
-nnoremap <leader>ss :w<cr>
-nnoremap <leader>q :q<cr>
-vnoremap <leader>rc :w !cmd<cr>
-nnoremap <leader>0 :CocCommand rest-client.request<cr>
-
 " Git fugitive
 nmap <leader>gs :Git<cr>
 nmap <leader>gf :diffget //2<cr>
@@ -73,3 +71,10 @@ nmap <leader>gj :diffget //3<cr>
 " language specific abbreviations
 autocmd FileType java iabbrev pcls public class <esc>"%pvbbdA {<cr>}<esc>O
 autocmd FileType java iabbrev psvm public static void main(String[] args) {<cr>}<esc>O
+
+" disable language server for csharp to avoid lag: PBSS
+augroup disable_lsp
+    autocmd!
+    autocmd BufWinEnter *.cs :CocDisable
+    autocmd BufWinEnter *.cs :call OmniSharp#StopAllServers()
+augroup end
