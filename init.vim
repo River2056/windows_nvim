@@ -36,6 +36,22 @@ func! CompileRun()
 endfunc
 nmap <leader>r :call CompileRun()<cr>
 
+" ChangeCase
+function! ChangeCase()
+    let l:word = expand('<cword>')
+    if l:word =~? '_\w'
+        " has underscore, change to camel case
+        let l:word = substitute(l:word, '_\(\w\)', '\U\1', 'g')
+        exec 'norm! ciw' . l:word
+    else
+        " no underscore, change to snake case
+        let l:word = substitute(l:word, '\(\u[A-Z]\)', '_\u\1', 'g')
+        let l:word = tolower(l:word)
+        exec 'norm! ciw' . l:word
+    endif
+endfunction
+nnoremap <leader>cc :call ChangeCase()<cr>
+
 " autocmd FileType go nnoremap <buffer> <leader>r :!go run %
 
 " fzf settings

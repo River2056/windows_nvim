@@ -7,7 +7,6 @@ nnoremap <leader>tex :Tex<cr>
 noremap <leader>jp :JsonPath<cr>
 nnoremap <leader><space> :noh<cr>
 vnoremap <leader>p "_dP
-nnoremap <leader>c viwU
 nnoremap <leader>o :Ex<cr>
 nnoremap <leader>% "%p
 nnoremap <leader>ss :w<cr>
