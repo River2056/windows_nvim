@@ -41,6 +41,8 @@ function! ChangeCase()
     let l:word = expand('<cword>')
     if l:word =~? '_\w'
         " has underscore, change to camel case
+        " might be all caps, tolower() first
+        let l:word = tolower(l:word)
         let l:word = substitute(l:word, '_\(\w\)', '\U\1', 'g')
         exec 'norm! ciw' . l:word
     else
