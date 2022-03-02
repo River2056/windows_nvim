@@ -68,8 +68,11 @@ nmap <leader>gf :diffget //2<cr>
 nmap <leader>gj :diffget //3<cr>
 
 " language specific abbreviations
-autocmd FileType java iabbrev pcls public class <esc>"%pvbbdA {<cr>}<esc>O
+autocmd FileType java iabbrev pcls public class <esc>"%pvbbdbbv^wwdA {<cr>}<esc>O
+autocmd FileType java iabbrev pint public interface <esc>"%pvbbdbbv^wwdA {<cr>}<esc>O
 autocmd FileType java iabbrev psvm public static void main(String[] args) {<cr>}<esc>O
+autocmd FileType typescript iabbrev ecls export class <esc>"%pvbbdbbv^wwdA {<cr>}<esc>O
+autocmd FileType typescript iabbrev eint export interface <esc>"%pvbbdbbv^wwdA {<cr>}<esc>O
 
 " disable language server for csharp to avoid lag: PBSS
 augroup disable_lsp

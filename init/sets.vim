@@ -34,4 +34,9 @@ colorscheme gruvbox
 set background=dark
 syntax enable
 
+augroup set_ts_tab_width
+    autocmd!
+    autocmd FileType typescript set tabstop=2 softtabstop=2 shiftwidth=2
+augroup end
+
 lua require('kevin')
