@@ -74,6 +74,7 @@ autocmd FileType java iabbrev pint public interface <esc>"%pvbbdbbv^wwdA {<cr>}<
 autocmd FileType java iabbrev psvm public static void main(String[] args) {<cr>}<esc>O
 autocmd FileType typescript iabbrev ecls export class <esc>"%pvbbdbbv^wwdA {<cr>}<esc>O
 autocmd FileType typescript iabbrev eint export interface <esc>"%pvbbdbbv^wwdA {<cr>}<esc>O
+autocmd FileType python iabbrev defmain def main():<esc>opass<esc>o<cr>if __name__ == '__main__':<esc>omain()
 
 " disable language server for csharp to avoid lag: PBSS
 augroup disable_lsp
