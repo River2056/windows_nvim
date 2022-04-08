@@ -68,6 +68,7 @@ nmap <leader>gf :diffget //2<cr>
 nmap <leader>gj :diffget //3<cr>
 
 " language specific abbreviations
+autocmd FileType java iabbrev sout System.out.println()
 autocmd FileType java iabbrev pcls public class <esc>"%pvbbdbbv^wwdA {<cr>}<esc>O
 autocmd FileType java iabbrev pint public interface <esc>"%pvbbdbbv^wwdA {<cr>}<esc>O
 autocmd FileType java iabbrev psvm public static void main(String[] args) {<cr>}<esc>O
@@ -77,6 +78,18 @@ autocmd FileType typescript iabbrev eint export interface <esc>"%pvbbdbbv^wwdA {
 " disable language server for csharp to avoid lag: PBSS
 augroup disable_lsp
     autocmd!
-    autocmd BufWinEnter *.cs :CocDisable
+    " autocmd BufWinEnter *.cs :CocDisable
     autocmd BufWinEnter *.cs :call OmniSharp#StopAllServers()
 augroup end
+
+function! SearchAndReplace()
+    let l:word = expand('<cword>')
+    echom l:word
+    exec "wincmd l"
+    " if search(l:word, 'w') != 0
+    "     exec "wincmd h"
+    "     exec "norm! 0d}dd"
+    " endif
+    call search(l:word, 'w')
+endfunction
+nnoremap <leader>sr :call SearchAndReplace()<cr>

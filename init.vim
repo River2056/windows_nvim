@@ -19,7 +19,7 @@ func! CompileRun()
     elseif &filetype == 'java'
         let l:path = expand('%')
         echo l:path
-        exec '!javac -d bin ' . l:path
+        exec '!javac -cp src -d bin ' . l:path
         echo 'compile success: ' . l:path
         let l:path = substitute(l:path, "\\", ".", "g")
         let l:path = substitute(l:path, ".java", "", "")
@@ -32,6 +32,8 @@ func! CompileRun()
         :!bash %<cr>
     elseif &filetype == 'go'
         :!go run %<cr>
+    elseif &filetype == 'dosbatch'
+        :!%
     endif
 endfunc
 nmap <leader>r :call CompileRun()<cr>
@@ -87,6 +89,7 @@ let g:fzf_colors =
 " previous-history instead of down and up. If you don't like the change,
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
+
 
 augroup remember_folds
     autocmd!

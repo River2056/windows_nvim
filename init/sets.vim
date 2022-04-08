@@ -39,4 +39,9 @@ augroup set_ts_tab_width
     autocmd FileType typescript set tabstop=2 softtabstop=2 shiftwidth=2
 augroup end
 
+augroup set_dos_batch_width
+    autocmd!
+    autocmd FileType dosbatch set tabstop=2 softtabstop=2 shiftwidth=2
+augroup end
+
 lua require('kevin')
