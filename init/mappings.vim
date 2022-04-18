@@ -17,6 +17,7 @@ nnoremap <leader>ev :Hex! C:/Users/user/AppData/Local/nvim/<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>pi :PlugInstall<cr>
 nnoremap <leader>pc :PlugClean<cr>
+nnoremap <space> za
 
 " tabs
 nnoremap <leader>dtt :diffthis<cr>
@@ -75,6 +76,7 @@ autocmd FileType java iabbrev psvm public static void main(String[] args) {<cr>}
 autocmd FileType typescript iabbrev ecls export class <esc>"%pvbbdbbv^wwdA {<cr>}<esc>O
 autocmd FileType typescript iabbrev eint export interface <esc>"%pvbbdbbv^wwdA {<cr>}<esc>O
 autocmd FileType python iabbrev defmain def main():<esc>opass<esc>o<cr>if __name__ == '__main__':<esc>omain()
+autocmd FileType python iabbrev deftest import unittest<esc>o<cr><esc>"%p$vbbdbbv^d,ccIclass Test<esc>l~<esc>A(unittest.TestCase):<cr>def test_(self):<cr>pass<cr><cr><esc>0aif __name__ == '__main__':<cr>unittest.main()
 
 " disable language server for csharp to avoid lag: PBSS
 augroup disable_lsp
