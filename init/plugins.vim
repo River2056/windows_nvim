@@ -25,6 +25,7 @@ Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'OrangeT/vim-csharp'
+Plug 'psf/black', { 'branch': 'stable' }
 " Plug 'mfussenegger/nvim-jdtls'
 " Plug 'nvim-lua/completion-nvim'
 " Plug 'neovim/nvim-lspconfig'

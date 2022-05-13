@@ -34,6 +34,8 @@ func! CompileRun()
         :!go run %<cr>
     elseif &filetype == 'dosbatch'
         :!%
+    elseif &filetype == 'c'
+        :!gcc % -o %< && %<.exe
     endif
 endfunc
 nmap <leader>r :call CompileRun()<cr>

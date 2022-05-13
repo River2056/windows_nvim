@@ -85,6 +85,11 @@ augroup disable_lsp
     autocmd BufWinEnter *.cs :call OmniSharp#StopAllServers()
 augroup end
 
+augroup black_on_save
+  autocmd!
+  autocmd BufWritePre *.py Black
+augroup end
+
 function! SearchAndReplace()
     let l:word = expand('<cword>')
     echom l:word
