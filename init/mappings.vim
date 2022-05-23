@@ -67,6 +67,8 @@ vnoremap < <gv
 nmap <leader>gs :Git<cr>
 nmap <leader>gf :diffget //2<cr>
 nmap <leader>gj :diffget //3<cr>
+nmap <leader>gc :Git commit<cr>
+nmap <leader>gp :Git push<cr>
 
 " language specific abbreviations
 autocmd FileType java iabbrev sout System.out.println()
