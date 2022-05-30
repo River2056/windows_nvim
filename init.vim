@@ -36,6 +36,8 @@ func! CompileRun()
         :!%
     elseif &filetype == 'c'
         :!gcc % -o %< && %<.exe
+    elseif &filetype == 'rust'
+        :!rustc % && %<.exe
     endif
 endfunc
 nmap <leader>r :call CompileRun()<cr>

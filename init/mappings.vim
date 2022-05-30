@@ -67,6 +67,7 @@ vnoremap < <gv
 nmap <leader>gs :Git<cr>
 nmap <leader>gf :diffget //2<cr>
 nmap <leader>gj :diffget //3<cr>
+nmap <leader>dg :diffget<cr>
 nmap <leader>gc :Git commit<cr>
 nmap <leader>gp :Git push<cr>
 
@@ -79,6 +80,7 @@ autocmd FileType typescript iabbrev ecls export class <esc>"%pvbbdbbv^wwdA {<cr>
 autocmd FileType typescript iabbrev eint export interface <esc>"%pvbbdbbv^wwdA {<cr>}<esc>O
 autocmd FileType python iabbrev defmain def main():<esc>opass<esc>o<cr>if __name__ == '__main__':<esc>omain()
 autocmd FileType python iabbrev deftest import unittest<esc>o<cr>O<esc>"%pvbbdbbv^dIdef <esc>A():<cr>pass<cr><cr><esc>"%p$vbbdbbv^d,ccIclass Test<esc>l~<esc>A(unittest.TestCase):<cr>def setUp(self):<cr>self.tests = []<cr><cr><esc>"%pvbbdbbv^dI	def test_<esc>A(self):<cr>for value, expected in self.tests:<cr>with self.subTest(value=value):<cr>result = <esc>"%pvbbdbbvT=di <esc>A(value)<cr>print(f'result: {result}, expected: {expected}, input: {value}')<cr>self.assertEqual(result, expected)<cr><cr><esc>0aif __name__ == '__main__':<cr>unittest.main()
+autocmd FileType python iabbrev defmn <cr><esc>"%pvbbdbbv0dviw"lyIdef <esc>A():<cr>pass<cr><cr><esc>d0Idef test_case():<cr>res = <esc>"lpA()<cr>print(res)<cr><cr><esc>d0Idef main():<cr>test_case() # res<cr><cr><esc>d0Iif __name__ == "__main__":<cr>main()
 
 " disable language server for csharp to avoid lag: PBSS
 augroup disable_lsp
