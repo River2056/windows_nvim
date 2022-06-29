@@ -72,7 +72,8 @@ nmap <leader>gc :Git commit<cr>
 nmap <leader>gp :Git push<cr>
 
 " language specific abbreviations
-autocmd FileType java iabbrev sout System.out.println()
+autocmd FileType java iabbrev sout System.out.println
+autocmd FileType java iabbrev souf System.out.printf()<esc>F(a
 autocmd FileType java iabbrev pcls public class <esc>"%pvbbdbbv^wwdA {<cr>}<esc>O
 autocmd FileType java iabbrev pint public interface <esc>"%pvbbdbbv^wwdA {<cr>}<esc>O
 autocmd FileType java iabbrev psvm public static void main(String[] args) {<cr>}<esc>O
