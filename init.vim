@@ -38,9 +38,12 @@ func! CompileRun()
         :!gcc % -o %< && %<.exe
     elseif &filetype == 'rust'
         :!rustc % && %<.exe
+    elseif &filetype == 'cpp'
+        :!g++ % -o %< && %<.exe
     endif
 endfunc
 nmap <leader>r :call CompileRun()<cr>
+nnoremap <leader>rr :!make clean && make && %<.exe<cr>
 
 " ChangeCase
 function! ChangeCase()
